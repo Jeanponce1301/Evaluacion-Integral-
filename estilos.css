@@ -1,0 +1,197 @@
+/* Estilos personalizados para CafePe */
+
+:root {
+    --primary-color: #8B4513;
+    --secondary-color: #D2691E;
+    --accent-color: #F4A460;
+    --dark-color: #3E2723;
+    --light-color: #FFF8DC;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-top: 76px; /* Altura del navbar fijo */
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                url('imagenes/_RSC5456.jpg') center/cover no-repeat;
+    min-height: 100vh;
+    position: relative;
+}
+
+.hero-overlay {
+    background: linear-gradient(135deg, rgba(139, 69, 19, 0.8), rgba(62, 39, 35, 0.8));
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+/* Carrusel */
+#heroCarousel {
+    margin-top: -76px; /* Compensar el padding-top del body */
+    position: relative;
+    z-index: 1;
+}
+
+.carousel-image {
+    position: relative;
+}
+
+.carousel-overlay {
+    background: linear-gradient(135deg, rgba(62, 39, 35, 0.85), rgba(139, 69, 19, 0.75));
+    min-height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.carousel-item {
+    position: relative;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%;
+    opacity: 0.8;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    opacity: 1;
+}
+
+.carousel-indicators {
+    margin-bottom: 2rem;
+}
+
+.carousel-indicators button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 2px solid rgba(255, 255, 255, 0.8);
+}
+
+.carousel-indicators button.active {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+}
+
+/* Navbar personalizado */
+.navbar-brand {
+    font-size: 1.5rem;
+    color: var(--accent-color) !important;
+}
+
+.navbar-nav .nav-link {
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--accent-color) !important;
+}
+
+/* Botones personalizados */
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn-outline-light:hover {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+    color: var(--dark-color);
+}
+
+/* Cards */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Secciones */
+section {
+    padding: 80px 0;
+}
+
+/* Footer */
+footer a:hover {
+    color: var(--accent-color) !important;
+    transition: color 0.3s ease;
+}
+
+/* Animaciones */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-section .lead {
+        font-size: 1rem;
+    }
+    
+    .carousel-overlay h1 {
+        font-size: 2rem !important;
+    }
+    
+    .carousel-overlay .lead {
+        font-size: 1rem !important;
+    }
+    
+    .carousel-overlay .btn {
+        font-size: 0.9rem;
+        padding: 0.5rem 1rem;
+    }
+}
+
+/* Efectos de hover en iconos */
+.bi {
+    transition: transform 0.3s ease;
+}
+
+.card:hover .bi {
+    transform: scale(1.2);
+}
+
+/* Estilos para formularios */
+.form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(139, 69, 19, 0.25);
+}
+
+/* Estilos para badges y etiquetas */
+.badge {
+    background-color: var(--primary-color);
+}
+
